@@ -7,12 +7,14 @@ public class Movement : MonoBehaviour
     public float jumpForce = 1f;
     public float _maxJumpSpeed = 6f;
     public float rotationSpeed = 10f;
+    public float moveSpeed = 100f;
     
     public Rigidbody rb;
 
     public Transform virtualCamera;
 
     private Vector3 _cameraForward;
+    private Vector3 _direction;
 
     private float _cameraAngle;
     private float _playerAngle;
@@ -24,11 +26,13 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        RotatePlayerToView();
+        _direction = new Vector3(Input.GetAxis("Horizontal"), 0 ,Input.GetAxis("Vertical")).normalized;
     }
 
     void FixedUpdate()
     {
+        RotatePlayerToView();
+        HandleMovement();
         if (Input.GetButton("Jump"))
         {
             HandleJump();
@@ -38,13 +42,19 @@ public class Movement : MonoBehaviour
 
     private void HandleJump()
     {
+        // Apply upward force
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Acceleration);
-
-        // Apply upward force if the upward velocity is below the max float speed
-        if (rb.linearVelocity.y < _maxJumpSpeed)
+        
+    }
+    
+    private void HandleMovement()
+    {
+        if (_direction != Vector3.zero)
         {
-            //rb.AddForce(Vector3.up * jumpForce, ForceMode.Acceleration);
+            Vector3 moveDirection = transform.TransformDirection(_direction);
+            rb.linearVelocity = moveDirection * moveSpeed * Time.fixedDeltaTime;
         }
+        
     }
 
     private void RotatePlayerToView()
@@ -57,10 +67,10 @@ public class Movement : MonoBehaviour
         if (Mathf.Abs(angleDifference) > 0.1)
         {
             Quaternion targetRotation = Quaternion.Euler(0f, _cameraAngle, 0f);
-            //Quaternion currentRotation = Quaternion.Euler(0f, _playerAngle, 0f);
-            
-            rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.deltaTime * rotationSpeed));
+            rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * rotationSpeed));
             
         }
     }
+
+    
 }
