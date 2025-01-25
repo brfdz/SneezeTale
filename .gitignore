@@ -73,3 +73,6 @@ crashlytics-build.properties
 
 # Added by Emir
 .vsconfig
+
+*.vscode
+.DS_Store
