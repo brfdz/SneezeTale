@@ -27,6 +27,8 @@ public class Room
 
     public Room(string name, int momentCount)
     {
+        
+        /*
         switch (name)
         {
             case "kitchen":
@@ -35,6 +37,7 @@ public class Room
                     dictionary[item.Key]
                 }
         }
+        */
     }
 
     void Start()
