@@ -35,18 +35,19 @@ public class RoomTrigger : MonoBehaviour
                 }
             }
         }
-        
+
     }
 
-public class Room
-{
-    public string name;
-    public int completedMomentCount = 0;
-    public int momentCount = 0;
-
-    public Room(string name)
+    public class Room
     {
-        this.name = name;
-    }
+        public string name;
+        public int completedMomentCount = 0;
+        public int momentCount = 0;
 
+        public Room(string name)
+        {
+            this.name = name;
+        }
+
+    }
 }

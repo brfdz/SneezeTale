@@ -74,6 +74,7 @@ crashlytics-build.properties
 # Added by Emir
 .vsconfig
 Build_v0.0.0
+Assets/TextMesh Pro
 .vscode/extensions.json
 .vscode/launch.json
 .vscode/settings.json
