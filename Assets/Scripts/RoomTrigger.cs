@@ -16,7 +16,7 @@ public class RoomTrigger : MonoBehaviour
     {
         roomMoments = new List<MomentController>();
         roomObject = new Room(roomName);
-        GameManager.managerInstance.rooms.Add(roomObject);
+        //GameManager.managerInstance.rooms.Add(roomObject);
     }
 
 

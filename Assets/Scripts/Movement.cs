@@ -52,7 +52,9 @@ public class Movement : MonoBehaviour
         if (_direction != Vector3.zero)
         {
             Vector3 moveDirection = transform.TransformDirection(_direction);
-            rb.linearVelocity = moveDirection * moveSpeed * Time.fixedDeltaTime;
+            var velocityY = rb.linearVelocity.y;
+            rb.linearVelocity = moveDirection * moveSpeed * Time.fixedDeltaTime + Vector3.up * velocityY;
+            
         }
         
     }

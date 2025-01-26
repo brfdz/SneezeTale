@@ -52,6 +52,7 @@ public class KillPlayer : MonoBehaviour
         // unfreeze game
         Time.timeScale = 1;
         GameManager.managerInstance.isPlayerDead = false;
+  //      player.transform.forward = respawnPoint.forward; //turn player face to respawn forward vector
         player.transform.position = respawnPoint.position; // move player to designated spawn point
         player.GetComponent<MeshRenderer>().enabled = true;
         player.GetComponent<Collider>().enabled = true;

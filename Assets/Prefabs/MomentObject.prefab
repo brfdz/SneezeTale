@@ -167,6 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDone: 0
   sound: {fileID: 7046832340747690967}
+  particles: {fileID: 6606683486313642025}
+  roomTrigger: {fileID: 0}
 --- !u!1 &5967973100515746044
 GameObject:
   m_ObjectHideFlags: 0
