@@ -7317,6 +7317,10 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 674072438}
+    - target: {fileID: 3840638449010953826, guid: df7dcb02f652540639a64ce3e54715de, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: f0446367be13bac4f82395d445ce02e8, type: 3}
     - target: {fileID: 6205840379832362302, guid: df7dcb02f652540639a64ce3e54715de, type: 3}
       propertyPath: m_Name
       value: Bubble
@@ -7660,7 +7664,6 @@ GameObject:
   - component: {fileID: 1577053006}
   - component: {fileID: 1577053005}
   - component: {fileID: 1577053004}
-  - component: {fileID: 1577053007}
   m_Layer: 0
   m_Name: door trigger
   m_TagString: SpawnPointTrigger
@@ -7712,20 +7715,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 503060578}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
---- !u!114 &1577053007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577053003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98d10d066c6c2e44848d462d1435a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 808005238}
-  roomAmbientClip: {fileID: 0}
 --- !u!1 &1625955138
 GameObject:
   m_ObjectHideFlags: 0
@@ -8292,7 +8281,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: -876546973899608171, guid: 181e4fa1728a30240b64234454d1063d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8331,7 +8320,7 @@ Transform:
   m_GameObject: {fileID: 2038509552}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.8500004, y: -0.92, z: 19.91379}
+  m_LocalPosition: {x: -5.8500004, y: 1.173, z: 19.91379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
