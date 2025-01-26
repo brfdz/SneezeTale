@@ -4948,17 +4948,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 172301534504256882, guid: 1fc248ad330d6bc4ab5ceb858fcd3521, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 172301534504256882, guid: 1fc248ad330d6bc4ab5ceb858fcd3521, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 172301534504256882, guid: 1fc248ad330d6bc4ab5ceb858fcd3521, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.73
+      objectReference: {fileID: 0}
     - target: {fileID: 1360296797083806955, guid: 1fc248ad330d6bc4ab5ceb858fcd3521, type: 3}
       propertyPath: m_Name
       value: DoorSpawn_Hall
       objectReference: {fileID: 0}
     - target: {fileID: 2005601564706914164, guid: 1fc248ad330d6bc4ab5ceb858fcd3521, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.01
+      value: 3.061
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005601564706914164, guid: 1fc248ad330d6bc4ab5ceb858fcd3521, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.96
       objectReference: {fileID: 0}
     - target: {fileID: 2005601564706914164, guid: 1fc248ad330d6bc4ab5ceb858fcd3521, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.9
+      value: 13.588
       objectReference: {fileID: 0}
     - target: {fileID: 3140085349642053964, guid: 1fc248ad330d6bc4ab5ceb858fcd3521, type: 3}
       propertyPath: m_IsActive
@@ -12613,25 +12629,9 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 674072438}
-    - target: {fileID: 3840638449010953826, guid: df7dcb02f652540639a64ce3e54715de, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 6205840379832362302, guid: df7dcb02f652540639a64ce3e54715de, type: 3}
       propertyPath: m_Name
       value: Bubble
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771574039702235193, guid: df7dcb02f652540639a64ce3e54715de, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771574039702235193, guid: df7dcb02f652540639a64ce3e54715de, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771574039702235193, guid: df7dcb02f652540639a64ce3e54715de, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7771574039702235193, guid: df7dcb02f652540639a64ce3e54715de, type: 3}
       propertyPath: m_LocalPosition.x
