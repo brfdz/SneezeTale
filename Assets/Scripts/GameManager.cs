@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         rooms = new List<Room>();
-        
+
         if (managerInstance == null)
         {
             managerInstance = this;
@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         string countList = "";
         foreach (var room in rooms)
         {
+            if (room.momentCount == 0) continue;
             countList += room.name + ": " + room.completedMomentCount + " / " + room.momentCount + "\n";
         }
 

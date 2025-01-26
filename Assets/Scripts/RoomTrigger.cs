@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -18,6 +19,8 @@ public class RoomTrigger : MonoBehaviour
         roomObject = new Room(roomName);
         GameManager.managerInstance.rooms.Add(roomObject);
     }
+
+   
 
 
     public void AddRoomMoment(MomentController moment)
