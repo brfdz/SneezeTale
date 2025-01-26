@@ -74,3 +74,6 @@ crashlytics-build.properties
 # Added by Emir
 .vsconfig
 Build_v0.0.0
+.vscode/extensions.json
+.vscode/launch.json
+.vscode/settings.json
