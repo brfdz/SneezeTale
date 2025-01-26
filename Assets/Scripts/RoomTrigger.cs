@@ -16,7 +16,7 @@ public class RoomTrigger : MonoBehaviour
     {
         roomMoments = new List<MomentController>();
         roomObject = new Room(roomName);
-        //GameManager.managerInstance.rooms.Add(roomObject);
+        GameManager.managerInstance.rooms.Add(roomObject);
     }
 
 
@@ -30,7 +30,6 @@ public class RoomTrigger : MonoBehaviour
     {
         if (roomMoments.Contains(moment))
         {
-            int i = roomMoments.IndexOf(moment);
             roomObject.completedMomentCount++;
         }
     }

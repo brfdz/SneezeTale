@@ -1,29 +1,23 @@
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
 
     public static GameManager managerInstance;
-
-    public List<string> keys = new List<string>();
-    public List<bool> values = new List<bool>();
-
-    public Dictionary<string, bool> roomAudioDictionary = new Dictionary<string, bool>();
-
     public bool isPlayerDead;
+    public bool isPaused;
+    public List<Room> rooms;
 
-    public List<Room> rooms; 
+    public TMP_Text roomMomentCounts;
+    public GameObject pauseMenu;
+    
     private void Awake()
     {
         rooms = new List<Room>();
-        int i = 0;
-        foreach (var item in keys)
-        {
-            roomAudioDictionary[item] = values[i];
-            i++;
-        }
-
+        
         if (managerInstance == null)
         {
             managerInstance = this;
@@ -36,15 +30,59 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        foreach (var key in roomAudioDictionary.Keys)
-        {
-            //Debug.Log($"Key: {key}, Value: {roomAudioDictionary[key]}");
-        }
+       UpdateMomentCount();
+       pauseMenu.SetActive(false);
+       Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TogglePauseMenu();
+        }
+    }
+
+    public void UpdateMomentCount()
+    {
+        string countList = "";
+        foreach (var room in rooms)
+        {
+            countList += room.name + ": " + room.completedMomentCount + " / " + room.momentCount + "\n";
+        }
+
+        roomMomentCounts.text = countList;
+    }
+
+    public void TogglePauseMenu()
+    {
+        if (!isPaused)
+        {
+            pauseMenu.SetActive(true);
+            isPaused = true;
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
+
+        }
+        else
+        {
+            pauseMenu.SetActive(false);
+            isPaused = false;
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+
+        }
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        // Stop play mode in the Editor
+        EditorApplication.isPlaying = false;
+#else
         
+        Application.Quit();
+#endif
     }
 
 }

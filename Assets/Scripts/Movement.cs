@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     public float jumpForce = 1f;
-    public float _maxJumpSpeed = 6f;
     public float rotationSpeed = 10f;
     public float moveSpeed = 100f;
     
@@ -18,11 +17,6 @@ public class Movement : MonoBehaviour
 
     private float _cameraAngle;
     private float _playerAngle;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked; 
-    }
 
     private void Update()
     {

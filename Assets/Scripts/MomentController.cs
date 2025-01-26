@@ -47,5 +47,6 @@ public class MomentController : MonoBehaviour
     {
         particles.Stop();
         roomTrigger.MarkMomentDone(this);
+        GameManager.managerInstance.UpdateMomentCount();
     }
 }
