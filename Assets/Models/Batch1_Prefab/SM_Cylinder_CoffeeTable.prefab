@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3678734642755052528}
   - component: {fileID: 4700262346064924239}
   - component: {fileID: 4098504098300076556}
+  - component: {fileID: 8989518414415255645}
   m_Layer: 0
   m_Name: SM_Cylinder_CoffeeTable
   m_TagString: Untagged
@@ -86,3 +87,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &8989518414415255645
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711239304761205297}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4739553443155641156, guid: 2797dc9988a2844de92fff7282a4aca7, type: 3}

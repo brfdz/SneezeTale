@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 191502233188529854}
   - component: {fileID: 3590669892722287049}
   - component: {fileID: 386440245502099400}
+  - component: {fileID: -956889172651992356}
   m_Layer: 0
   m_Name: SM_Ceiling2M
   m_TagString: Untagged
@@ -86,3 +87,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-956889172651992356
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8376256625357436643}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1583583820785082236, guid: 1f7eb5a8ef5ff4386a1d8a6fde3f0a2d, type: 3}

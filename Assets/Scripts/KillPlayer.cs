@@ -6,7 +6,6 @@ public class KillPlayer : MonoBehaviour
     public GameObject player;
     private Transform respawnPoint;
     private AudioSource[] allAudioSources;
-    public bool isDead;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +32,7 @@ public class KillPlayer : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("SpawnPointTrigger"))
         {
+            
             StartCoroutine(waitToSpawn());
         }
     }
@@ -43,14 +43,15 @@ public class KillPlayer : MonoBehaviour
         Time.timeScale = 0;
         player.GetComponent<MeshRenderer>().enabled = false; 
         player.GetComponent<Collider>().enabled = false;
-        isDead = true;
+        StopAllAudio();
+        GameManager.managerInstance.isPlayerDead = true; // set player dead globally for moment restarts
 
         //Wait for 4 seconds
         yield return new WaitForSecondsRealtime(3);
 
         // unfreeze game
         Time.timeScale = 1;
-        isDead = false;
+        GameManager.managerInstance.isPlayerDead = false;
         player.transform.position = respawnPoint.position; // move player to designated spawn point
         player.GetComponent<MeshRenderer>().enabled = true;
         player.GetComponent<Collider>().enabled = true;

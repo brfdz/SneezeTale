@@ -11,8 +11,12 @@ public class GameManager : MonoBehaviour
 
     public Dictionary<string, bool> roomAudioDictionary = new Dictionary<string, bool>();
 
+    public bool isPlayerDead;
+
+    public List<Room> rooms; 
     private void Awake()
     {
+        rooms = new List<Room>();
         int i = 0;
         foreach (var item in keys)
         {
@@ -34,7 +38,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (var key in roomAudioDictionary.Keys)
         {
-            Debug.Log($"Key: {key}, Value: {roomAudioDictionary[key]}");
+            //Debug.Log($"Key: {key}, Value: {roomAudioDictionary[key]}");
         }
     }
 

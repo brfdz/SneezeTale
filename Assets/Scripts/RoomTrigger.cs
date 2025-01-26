@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RoomTrigger : MonoBehaviour
@@ -9,45 +10,41 @@ public class RoomTrigger : MonoBehaviour
     public Room roomObject;
     public string roomName;
 
-    public Dictionary<string, bool> dictionary = GameManager.managerInstance.roomAudioDictionary;
+    private List<MomentController> roomMoments;
 
-    void Start()
+    void Awake()
     {
+        roomMoments = new List<MomentController>();
         roomObject = new Room(roomName);
-        SetRoomMoments();
+        GameManager.managerInstance.rooms.Add(roomObject);
     }
 
-    void Update()
-    {
 
+    public void AddRoomMoment(MomentController moment)
+    {
+        roomMoments.Add(moment);
+        roomObject.momentCount++;
     }
 
-    private void SetRoomMoments()
+    public void MarkMomentDone(MomentController moment)
     {
-        foreach (var item in dictionary)
+        if (roomMoments.Contains(moment))
         {
-            if (item.Key.ToLower().Contains(roomName))
-            {
-                roomObject.momentCount++;
-                if (item.Value.Equals(1))
-                {
-                    roomObject.completedMomentCount++;
-                }
-            }
+            int i = roomMoments.IndexOf(moment);
+            roomObject.completedMomentCount++;
         }
-
     }
 
-    public class Room
+}
+
+public class Room
+{
+    public string name;
+    public int completedMomentCount = 0;
+    public int momentCount;
+    public Room(string name)
     {
-        public string name;
-        public int completedMomentCount = 0;
-        public int momentCount = 0;
-
-        public Room(string name)
-        {
-            this.name = name;
-        }
-
+        this.name = name;
     }
+    
 }
