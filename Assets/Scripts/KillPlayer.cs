@@ -56,6 +56,7 @@ public class KillPlayer : MonoBehaviour
         player.transform.position = respawnPoint.position; // move player to designated spawn point
         player.GetComponent<MeshRenderer>().enabled = true;
         player.GetComponent<Collider>().enabled = true;
+        GameManager.managerInstance.ambiantMusic.Play();
     }
 
     void StopAllAudio()

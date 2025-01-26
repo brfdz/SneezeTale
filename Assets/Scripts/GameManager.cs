@@ -13,10 +13,13 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text roomMomentCounts;
     public GameObject pauseMenu;
+
+    public AudioSource ambiantMusic;
     
     private void Awake()
     {
         rooms = new List<Room>();
+        ambiantMusic = GetComponent<AudioSource>();
 
         if (managerInstance == null)
         {
