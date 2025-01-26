@@ -6,42 +6,47 @@ public class RoomTrigger : MonoBehaviour
     public Transform respawnPoint;
     public AudioClip roomAmbientClip;
 
+    public Room roomObject;
+    public string roomName;
+
+    public Dictionary<string, bool> dictionary = GameManager.managerInstance.roomAudioDictionary;
+
     void Start()
     {
-       
+        roomObject = new Room(roomName);
+        SetRoomMoments();
     }
 
     void Update()
     {
 
     }
-}
+
+    private void SetRoomMoments()
+    {
+        foreach (var item in dictionary)
+        {
+            if (item.Key.ToLower().Contains(roomName))
+            {
+                roomObject.momentCount++;
+                if (item.Value.Equals(1))
+                {
+                    roomObject.completedMomentCount++;
+                }
+            }
+        }
+        
+    }
 
 public class Room
 {
     public string name;
-    public int completedMomentCount;
-    public int momentCount;
+    public int completedMomentCount = 0;
+    public int momentCount = 0;
 
-    public Dictionary<string, bool> dictionary = new Dictionary<string, bool>();
-
-    public Room(string name, int momentCount)
+    public Room(string name)
     {
-        
-        /*
-        switch (name)
-        {
-            case "kitchen":
-                foreach (var item in dictionary)
-                {
-                    dictionary[item.Key]
-                }
-        }
-        */
+        this.name = name;
     }
 
-    void Start()
-    {
-        dictionary = GameManager.managerInstance.roomAudioDictionary;
-    }
 }
