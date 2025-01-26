@@ -269,7 +269,6 @@ GameObject:
   - component: {fileID: 238454798}
   - component: {fileID: 238454801}
   - component: {fileID: 238454800}
-  - component: {fileID: 238454799}
   m_Layer: 0
   m_Name: door trigger
   m_TagString: SpawnPointTrigger
@@ -292,19 +291,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2059605532}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
---- !u!114 &238454799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238454797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98d10d066c6c2e44848d462d1435a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 816564770}
 --- !u!65 &238454800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -706,7 +692,6 @@ GameObject:
   - component: {fileID: 531014459}
   - component: {fileID: 531014462}
   - component: {fileID: 531014461}
-  - component: {fileID: 531014460}
   m_Layer: 0
   m_Name: door trigger
   m_TagString: SpawnPointTrigger
@@ -729,19 +714,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 753270483}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
---- !u!114 &531014460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 531014458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98d10d066c6c2e44848d462d1435a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 83242685}
 --- !u!65 &531014461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1848,7 +1820,6 @@ GameObject:
   - component: {fileID: 963715274}
   - component: {fileID: 963715277}
   - component: {fileID: 963715276}
-  - component: {fileID: 963715275}
   m_Layer: 0
   m_Name: door trigger
   m_TagString: SpawnPointTrigger
@@ -1871,19 +1842,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 623080829}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
---- !u!114 &963715275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963715273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98d10d066c6c2e44848d462d1435a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 1634125763}
 --- !u!65 &963715276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2640,7 +2598,6 @@ GameObject:
   - component: {fileID: 1510246153}
   - component: {fileID: 1510246156}
   - component: {fileID: 1510246155}
-  - component: {fileID: 1510246154}
   m_Layer: 0
   m_Name: door trigger
   m_TagString: SpawnPointTrigger
@@ -2663,19 +2620,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2035720188}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
---- !u!114 &1510246154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510246152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98d10d066c6c2e44848d462d1435a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 533664133}
 --- !u!65 &1510246155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2781,6 +2725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 808005238}
+  roomAmbientClip: {fileID: 0}
 --- !u!1 &1625955138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,6 +2866,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 623080829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1779411057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779411058}
+  - component: {fileID: 1779411059}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779411058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779411057}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.2225735, y: -2.6227415, z: -16.325468}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1779411059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779411057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a6f623ec58d244fb5ce870feee3db6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys:
+  - Kitchen-1
+  - Bathroom-1
+  values: 0100
 --- !u!1 &1780301956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3665,3 +3658,4 @@ SceneRoots:
   - {fileID: 2035720188}
   - {fileID: 753270483}
   - {fileID: 1330397567}
+  - {fileID: 1779411058}
